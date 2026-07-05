@@ -1,0 +1,585 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  /* Deep obsidian slate color */
+  background-color: #0b0f19;
+  /* Subtle radial light leak from the center */
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(30, 41, 59, 0.5) 0%,
+    rgba(11, 15, 25, 1) 70%
+  );
+  background-attachment: fixed;
+}
+
+.glass-input {
+  width: 100%;
+  position: relative;
+  right: 36rem;
+  top: 10rem;
+  max-width: 320px;
+  padding: 14px 20px;
+  font-size: 15px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 99px; /* Pill shape */
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ===================== brooklynb======== */
+.brooklyn-heading {
+  font-family: 'Cinzel', 'Didot', serif;
+  font-size: 3.5rem;          /* Large, confident size */
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;      /* Cinematic, luxury spacing */
+  text-align: center;
+  padding-left: 0.4em;        /* Perfectly centers the text by offsetting the trailing letter-spacing */
+  margin: 24px 0;
+ 
+  
+  /* Subtle 3D shadow depth */
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 10px 20px rgba(255, 255, 255, 0.05);
+  
+  /* Smooth scale-in interaction */
+  animation: premiumReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes premiumReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 000000000000000000000000000000000 */
+
+.premium-hardware-card {
+  left: 33rem;
+
+  top: 13rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 32px;
+  margin-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.7); /* Translucent obsidian obsidian */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  
+  /* Precision hairline borders */
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  color: #f8fafc;
+  overflow: hidden;
+  
+  /* Absolute luxury ease curve (Deceleration) */
+  transition: 
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    
+  box-shadow: 
+    0 10px 40px -10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0px 0px rgba(255, 255, 255, 0.05);
+}
+
+/* --- Top Metadata Strip --- */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a7f3d0; /* Soft emerald */
+  background: rgba(5, 150, 105, 0.15);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #34d399;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #34d399;
+}
+
+.serial-number {
+  font-size: 10px;
+  font-weight: 600;
+  color: #475569;
+  letter-spacing: 0.1em;
+}
+
+/* --- Core Content --- */
+.card-title {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.card-description {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #94a3b8; /* Muted slate for professional readability */
+  margin-bottom: 32px;
+}
+
+/* --- Dual Performance Metrics --- */
+.card-footer {
+  display: flex;
+  gap: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 24px;
+}
+
+.metric-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 18px;
+  font-weight: 500;
+  color: #f1f5f9;
+}
+
+/* --- Ambient Kinetic Glow Layer --- */
+.card-glow-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 0% 0%, 
+    rgba(99, 102, 241, 0.12) 0%, 
+    transparent 60%
+  );
+  pointer-events: none;
+  mix-blend-mode: screen;
+  transition: opacity 0.5s ease;
+  opacity: 0.5;
+}
+
+/* --- Micro-Interaction Hover Mechanics --- */
+.premium-hardware-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 30px 60px -20px rgba(0, 0, 0, 0.7),
+    0 0 50px -10px rgba(99, 102, 241, 0.15),
+    inset 0 1px 0px 0px rgba(255, 255, 255, 0.1);
+}
+
+.premium-hardware-card:hover .card-glow-layer {
+  opacity: 1;
+}
+
+
+
+.oversized-container {
+  position: relative;
+top: 10rem;
+left: 28.8rem;
+  display: flex;
+  align-items: center;
+  width: 550px;
+  background: #f4f4f5; /* Soft grey background */
+  border-radius: 20px;
+  padding: 10px 16px 10px 28px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.oversized-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 16px 0;
+  font-size: 18px;
+  color: #18181b;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+
+.oversized-input:focus {
+  outline: none;
+}
+
+.oversized-input::placeholder {
+  color: #a1a1aa;
+}
+
+.oversized-btn {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  color: #18181b;
+  font-size: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+/* Deep focus shift */
+.oversized-container:focus-within {
+  background: #ffffff;
+  box-shadow: 
+    0px 0px 0px 1px rgba(0, 0, 0, 0.05),
+    0px 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+
+.oversized-container::placeholder{
+  font-family: 'Cormorant Garamond', serif; /* Elegant serif style */
+  font-style: italic;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  
+  /* Creates a subtle metallic silver/gold gradient overlay */
+  background: linear-gradient(90deg, #555 0%, #888 50%, #555 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Slow, luxurious shimmer loop */
+  animation: placeholderShine 6s linear infinite;
+  opacity: 0.7;
+  transition: all 0.4s ease;
+} 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------- */
+
+.oversized-btn:hover {
+  background: #18181b;
+  color: #ffffff;
+}
+
+
+
+.btn-luxury {
+  position: relative;
+  border-radius: 10px;
+  width: 340px;
+  left: 36rem;
+  top: 11rem;
+  padding: 18px 0;
+  font-family: "Didot", "Bodoni MT", "Cinzel", serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ffffff;
+  background: #111111;
+  border: 1px solid #111111;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* The sleek hover overlay */
+.btn-luxury::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-luxury:hover {
+  color: #111111;
+}
+
+.btn-luxury:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn-luxury:active {
+  transform: scale(0.99); /* Premium micro-press */
+}
+
+.btn-velvet-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 200px;
+  margin-right: 1rem;
+  padding: 14px 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #a1a1aa; /* Elegant muted zinc text */
+  background: #18181b; /* Sleek deep dark base */
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-icon {
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Elegant transition to severe warning on hover */
+.btn-velvet-delete:hover {
+  color: #fda4af; /* Soft rose pink text */
+  background: #4c0519; /* Deep, sophisticated dark wine/crimson */
+  border-color: #9f1239;
+  /* Ultra-diffuse crimson glow */
+  box-shadow: 0px 12px 30px rgba(159, 18, 57, 0.15); 
+}
+
+.btn-velvet-delete:hover .btn-icon {
+  opacity: 1;
+  transform: rotate(-10deg) scale(1.05); /* Playful micro-tilt */
+}
+
+.btn-velvet-delete:active {
+  transform: scale(0.98);
+}
+/* [[[[[[[[[[ */
+.btn-ink-edit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 140px;
+  padding: 14px 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #334155; /* Slate text */
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.edit-icon {
+  color: #64748b;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Fluid transformation to focus blue/indigo */
+.btn-ink-edit:hover {
+  color: #1e1b4b; /* Deep twilight blue */
+  background: #f8fafc;
+  border-color: #6366f1; /* Premium Indigo */
+  box-shadow: 
+    0px 4px 12px rgba(99, 102, 241, 0.08),
+    0px 0px 0px 4px rgba(99, 102, 241, 0.1);
+}
+
+/* Micro-animation: Pen angles forward and lifts slightly */
+.btn-ink-edit:hover .edit-icon {
+  color: #6366f1;
+  transform: translate(2px, -2px) rotate(15deg);
+}
+
+.btn-ink-edit:active {
+  transform: scale(0.98);
+}
+
+
+
+
+:root {
+  --obsidian: #050505;
+  --velvet-black: #0c0c0e;
+  --liquid-gold: linear-gradient(135deg, #b38728 0%, #fbf5b7 25%, #daa520 50%, #fbf5b7 75%, #aa771c 100%);
+  --ambient-gold: rgba(218, 165, 32, 0.4);
+  --glass-edge: rgba(255, 255, 255, 0.06);
+}
+
+
+
+.luxury-paragraph {
+  font-family: var(--font-premium-sans);
+  font-size: 1.05rem;
+  font-weight: 300; /* Ultra-light weight looks incredibly high-end */
+  line-height: 1.85; /* Generous breathing room between lines */
+  color: var(--charcoal-silk);
+  letter-spacing: 0.04em; /* Softly spaced out tracking */
+  margin-bottom: 24px;
+  text-align: justify; /* Optional: gives a clean, editorial magazine block layout */
+  text-justify: inter-word;
+  color: red;
+  position: absolute;
+  top: 18.6rem;
+  left: 30rem;
+  /* Silk-smooth text rendering engine optimization */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  
+  transition: color 0.4s ease;
+}
+
+/* The "Lead" Paragraph: For the first paragraph or introduction hook */
+.luxury-paragraph.premium-lead {
+  font-family: var(--font-premium-serif);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--off-white);
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+
+/* Subtle Premium Interaction: Text slightly illuminates when hovered */
+.luxury-paragraph:hover {
+  color: #ffffff;
+}
+
+/* Editorial Drop Cap Feature (Optional)
+   Makes the very first letter of the lead paragraph look like an elite magazine */
+.premium-lead::first-letter {
+  font-family: var(--font-premium-serif);
+  font-size: 3.5rem;
+  float: left;
+  margin-top: 8px;
+  margin-right: 12px;
+  line-height: 0.85;
+  color: var(--gold-accent);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 600px){
+  .brooklyn-heading{
+    width: 100%;
+    font-size: 6rem;
+    margin-left: 2rem;
+    
+    margin-top: 5rem;
+  }
+  
+   .oversized-container{
+    top: 12rem;
+    left: 3rem;
+    width: 28rem;
+     font-size: 2rem;
+    height: 3rem;
+   
+    
+   }
+   .oversized-container::placeholder{
+    font-size: 2rem;
+    color: #1e1b4b;
+   }
+   
+.btn-luxury{
+  top: 15rem;
+  left: 8rem;
+  font-size: 2rem;
+}
+.premium-hardware-card {
+  left: 4rem;
+  text-align: center;
+  top: 20rem;
+  width: 70rem;
+  font-size: 1.5rem;
+  
+  
+}
+.btn-velvet-delete{
+  font-size: 2rem;
+}
+.btn-ink-edit{
+  font-size: 2rem;
+}
+.luxury-paragraph{
+  top: 27rem;
+  left: 5rem;
+  font-size: 2rem;
+  width: 25rem;
+}
+}
