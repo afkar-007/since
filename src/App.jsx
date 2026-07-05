@@ -4,10 +4,11 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
+
 function App() {
 
- const[course,setCourse]=useState([])
 
+const [course,setcourse]=useState([])
  const[username,setUsername]=useState("")
  const[skills,setSkills]=useState("")
 const [error,setError]=useState("")
@@ -28,7 +29,7 @@ fetching()
  },[])
 
  async function fetching() {
-  const Response= await fetch("http://localhost:4000/tiger")
+  const Response= await fetch("https://6a4a149cedfa6a2b5fd789e3.mockapi.io/afkar")
   const data =await Response.json()
   
   setCourse(data)
@@ -62,7 +63,7 @@ async function create(e) {
   }
 
 
-    await fetch("http://localhost:4000/tiger",{
+    await fetch("https://6a4a149cedfa6a2b5fd789e3.mockapi.io/afkar",{
       method:"POST",
       body:JSON.stringify(newData)
     })
@@ -80,7 +81,7 @@ async function create(e) {
 
 async function handledelete(id) {
 
-  await fetch(`http://localhost:4000/tiger/${id}`,{
+  await fetch(`https://6a4a149cedfa6a2b5fd789e3.mockapi.io/afkar/${id}`,{
     method:"DELETE"
 
   })
