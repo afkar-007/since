@@ -1,0 +1,15 @@
+{
+  "tiger": [
+    {
+      "name": "yyy",
+      "title": "yyyyy",
+      "id": "U3aInlugneA"
+    },
+    {
+      "name": "hhhh",
+      "title": "hhhh",
+      "id": "tVvRBg1T7-w"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
