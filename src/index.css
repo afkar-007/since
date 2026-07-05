@@ -537,15 +537,15 @@ left: 28.8rem;
   .brooklyn-heading{
     width: 100%;
     font-size: 6rem;
-    margin-left: 2rem;
+    margin-left: 0rem;
     
     margin-top: 5rem;
   }
   
    .oversized-container{
     top: 12rem;
-    left: 3rem;
-    width: 28rem;
+    left: 6rem;
+    width:20rem;
      font-size: 2rem;
     height: 3rem;
    
@@ -562,7 +562,7 @@ left: 28.8rem;
   font-size: 2rem;
 }
 .premium-hardware-card {
-  left: 4rem;
+  left: 2.7rem;
   text-align: center;
   top: 20rem;
   width: 70rem;
@@ -578,8 +578,14 @@ left: 28.8rem;
 }
 .luxury-paragraph{
   top: 27rem;
-  left: 5rem;
+  left: 2rem;
   font-size: 2rem;
   width: 25rem;
 }
+body,html{
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
+}
+
