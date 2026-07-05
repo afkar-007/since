@@ -8,7 +8,7 @@ import './App.css'
 function App() {
 
 
-const [course,setcourse]=useState([])
+const [course,setCourse]=useState([])
  const[username,setUsername]=useState("")
  const[skills,setSkills]=useState("")
 const [error,setError]=useState("")
@@ -29,7 +29,7 @@ fetching()
  },[])
 
  async function fetching() {
-  const Response= await fetch("https://6a4a149cedfa6a2b5fd789e3.mockapi.io/afkar")
+  const Response= await fetch("https://6a4a2579edfa6a2b5fd79809.mockapi.io/project")
   const data =await Response.json()
   
   setCourse(data)
@@ -42,30 +42,27 @@ async function create(e) {
 
   e.preventDefault()
 
+  console.log(username);
   if(username.length<3){
-    setError("enter a valid name")
+    setError("Enter a valid name")
+return
+  }
+    if(skills.length<3){
+    setError("Enter a valid title")
     return
   }
 
-  if(skills.length<3){
-    setError("enter a vald title name")
-    return
-  }
+ 
 
 
-
-
-
-  const newData={
-    name:username,
-    title:skills
-
-  }
-
-
-    await fetch("https://6a4a149cedfa6a2b5fd789e3.mockapi.io/afkar",{
+    await fetch("https://6a4a2579edfa6a2b5fd79809.mockapi.io/project",{
       method:"POST",
-      body:JSON.stringify(newData)
+      headers:{'content-Type':'application/json'},
+      body:JSON.stringify({
+        name: username,
+        title:skills
+        
+      })
     })
     setError("")
     setSkills("")
@@ -81,7 +78,7 @@ async function create(e) {
 
 async function handledelete(id) {
 
-  await fetch(`https://6a4a149cedfa6a2b5fd789e3.mockapi.io/afkar/${id}`,{
+  await fetch(`https://6a4a2579edfa6a2b5fd79809.mockapi.io/project/${id}`,{
     method:"DELETE"
 
   })
